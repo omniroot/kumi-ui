@@ -1,0 +1,68 @@
+.typo[data-variant="display"] {
+  line-height: 100%;
+  letter-spacing: 3%;
+
+  &[data-size="lg"] {
+    font-size: 42px;
+  }
+
+  &[data-size="md"] {
+    font-size: 32px;
+  }
+
+  &[data-size="sm"] {
+    font-size: 28px;
+  }
+}
+
+.typo[data-variant="title"] {
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 3%;
+
+  &[data-size="lg"] {
+    font-size: 24px;
+  }
+
+  &[data-size="md"] {
+    font-size: 18px;
+  }
+
+  &[data-size="sm"] {
+    font-size: 16px;
+  }
+}
+
+.typo[data-variant="text"] {
+  line-height: 125%;
+  letter-spacing: 3%;
+
+  &[data-size="lg"] {
+    font-size: 20px;
+  }
+
+  &[data-size="md"] {
+    font-size: 16px;
+  }
+
+  &[data-size="sm"] {
+    font-size: 14px;
+  }
+}
+
+.typo[data-variant="subtext"] {
+  line-height: 100%;
+  letter-spacing: 3%;
+
+  &[data-size="lg"] {
+    font-size: 14px;
+  }
+
+  &[data-size="md"] {
+    font-size: 12px;
+  }
+
+  &[data-size="sm"] {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,97 @@
+.button {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding-inline: 16px;
+  padding-block: 8px;
+  border: none;
+  font-family: inherit;
+  transition:
+    color 150ms,
+    background-color 200ms,
+    transform 150ms;
+
+  &:focus-visible {
+    outline: 2px solid var(--kumi-colors-tertiary);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: scale(98%);
+  }
+}
+
+@media (hover: "hover") {
+  .button:hover {
+    filter: brightness(95%);
+  }
+}
+
+.button[data-variant="primary"] {
+  color: var(--kumi-colors-on-primary);
+  background-color: var(--kumi-colors-primary);
+
+  &:hover {
+    background-color: var(--kumi-colors-primary-hover);
+  }
+}
+
+.button[data-variant="secondary"] {
+  color: var(--kumi-colors-on-secondary);
+  background-color: var(--kumi-colors-secondary);
+  &:hover {
+    background-color: var(--kumi-colors-secondary-hover);
+  }
+}
+
+.button[data-variant="tertiary"] {
+  color: var(--kumi-colors-on-tertiary);
+  background-color: var(--kumi-colors-tertiary);
+  &:hover {
+    background-color: var(--kumi-colors-tertiary-hover);
+  }
+}
+
+.button[data-variant="outline"] {
+  color: var(--kumi-colors-text);
+  background-color: transparent;
+  border: 2px solid var(--kumi-colors-primary);
+
+  &:hover {
+    color: var(--kumi-colors-on-primary);
+    background-color: var(--kumi-colors-primary);
+  }
+}
+
+.button[data-variant="ghost"] {
+  color: var(--kumi-colors-text);
+  background-color: transparent;
+
+  &:hover {
+    background-color: var(--kumi-colors-secondary-ghost-hover);
+  }
+}
+
+.button[data-size="sm"] {
+  height: 30px;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 12px;
+}
+
+.button[data-size="md"] {
+  height: 38px;
+  font-size: 16px;
+  line-height: 22px;
+  border-radius: 14px;
+}
+
+.button[data-size="lg"] {
+  height: 46px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 18px;
+}

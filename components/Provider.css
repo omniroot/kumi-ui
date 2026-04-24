@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --kumi-spacing-sm: 4px;
+  --kumi-spacing-md: 8px;
+  --kumi-spacing-lg: 12px;
+}
+
+:root {
+  /* Text */
+  --kumi-colors-text-low: #5a5646;
+  --kumi-colors-text: #101818;
+  --kumi-colors-text-high: #081616;
+
+  /* Surface colors */
+  --kumi-colors-surface: #e8e1d6;
+  --kumi-colors-surface-backdrop: #c4beb4c1;
+  --kumi-colors-surface-high: #d7cab7;
+  --kumi-colors-surface-highest: #b5a489;
+
+  /* Primary */
+  --kumi-colors-primary: #413725;
+  --kumi-colors-primary-hover: #5a4e35;
+  --kumi-colors-on-primary: #efeded;
+
+  /* Secondary */
+  --kumi-colors-secondary: #787258;
+  --kumi-colors-secondary-hover: rgb(149, 135, 104);
+  --kumi-colors-on-secondary: #efeded;
+  --kumi-colors-secondary-ghost-hover: #7872584a;
+
+  --kumi-colors-ghost: transparent;
+  --kumi-colors-ghost-hover: #7872584a;
+
+  /* Tertiary */
+  --kumi-colors-tertiary: #fe695a;
+  --kumi-colors-tertiary-hover: #fa7d72;
+  --kumi-colors-on-tertiary: #1c1b17;
+}
+
+:root[kumi-mode="dark"] {
+  --kumi-colors-text: rgb(225, 218, 218);
+  --kumi-colors-primary: #bbab92;
+  --kumi-colors-on-primary: #171510;
+  --kumi-colors-surface: #171510;
+  --kumi-colors-surface-backdrop: #040403a1;
+  --kumi-colors-surface-high: #3a362b;
+  --kumi-colors-text-low: #e3dbc6;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--kumi-colors-text);
+  background-color: var(--kumi-colors-surface);
+
+  scrollbar-color: var(--kumi-colors-primary) transparent;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  transition:
+    color 200ms,
+    background-color 150ms;
+
+  /* font-synthesis: none; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+::selection {
+  color: var(--kumi-colors-on-primary);
+  background-color: var(--kumi-colors-primary);
+}
+
+/* полоса прокрутки */
+::-webkit-scrollbar {
+  width: 2px; /* для вертикальной */
+  height: 6px; /* для горизонтальной */
+}
+
+/* трек (фон полосы) */
+::-webkit-scrollbar-track {
+  /* background: var(--chakra-colors-surface); */
+  background: transparent;
+  border-radius: 8px;
+}
+
+/* сам ползунок */
+::-webkit-scrollbar-thumb {
+  /* background-color: #c98383cc; полупрозрачный цвет */
+  border-radius: 8px;
+  border: 2px solid var(--chakra-colors-primary); /* отступ внутри трека */
+}
+
+/* при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e90000;
+}

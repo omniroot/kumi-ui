@@ -1,0 +1,54 @@
+.box[data-flex-direction="row"] {
+  flex-direction: row;
+}
+.box[data-flex-direction="row-reverse"] {
+  flex-direction: row-reverse;
+}
+
+.box[data-flex-direction="column"] {
+  flex-direction: column;
+}
+
+.box[data-flex-direction="column-reverse"] {
+  flex-direction: column-reverse;
+}
+
+.box[data-gap="sm"] {
+  gap: var(--kumi-gap-sm);
+}
+
+.box[data-gap="md"] {
+  gap: var(--kumi-gap-md);
+}
+
+.box[data-gap="lg"] {
+  gap: var(--kumi-gap-lg);
+}
+
+.box[data-justify="space-around"] {
+  justify-content: space-around;
+}
+
+.box[data-justify="space-between"] {
+  justify-content: space-between;
+}
+
+.box[data-justify="space-evenly"] {
+  justify-content: space-evenly;
+}
+
+.box[data-display="block"] {
+  display: block;
+}
+
+.box[data-display="inline-block"] {
+  display: inline-block;
+}
+
+.box[data-display="inline-flex"] {
+  display: inline-flex;
+}
+
+.box[data-display="flex"] {
+  display: flex;
+}
