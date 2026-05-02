@@ -1,30 +1,31 @@
-import clsx from "clsx";
-import styles from "./Checkbox.module.css";
-import { useState, type FC } from "react";
-import { IconCheck } from "@tabler/icons-react";
+import { Checkbox as ChakraCheckbox } from "@chakra-ui/react";
+import type { FC } from "react";
 
 interface IProps {
-  value?: boolean;
-  onChange?: (state: boolean) => void;
-  className?: string;
+	value?: boolean;
+	onChange?: (state: boolean) => void;
+	className?: string;
 }
 export const Checkbox: FC<IProps> = ({ value, onChange, className }) => {
-  const toggleChecked = () => {
-    onChange?.(!value);
-  };
-
-  const _class = clsx(styles.checkbox, className);
-  return (
-    <div className={styles.container}>
-      <input
-        type="checkbox"
-        checked={value}
-        onClick={toggleChecked}
-        className={styles.orig}
-      />
-      <div className={_class} onClick={toggleChecked} data-checked={value}>
-        <IconCheck size={18} className={styles.icon} />
-      </div>
-    </div>
-  );
+	return (
+		<ChakraCheckbox.Root checked={value} onCheckedChange={(v) => onChange?.(!!v.checked)}>
+			<ChakraCheckbox.Control
+				w={"30px"}
+				h={"30px"}
+				border={"2px solid {colors.primary}"}
+				color={"on-primary"}
+				borderRadius={"12px"}
+				transition={"background 200ms"}
+				_icon={{
+					w: "18px",
+					color: "on-primary",
+					h: "18px",
+				}}
+				_checked={{
+					bg: "primary",
+				}}
+			/>
+			<ChakraCheckbox.HiddenInput />
+		</ChakraCheckbox.Root>
+	);
 };
